@@ -26,32 +26,34 @@ body {
 }
 
 /* ============================================================
-   INTRO PRESENTACIÓN
+   INTRO PRESENTACIÓN (AJUSTE CENTRADO)
    ============================================================ */
 .intro-presentacion {
     width: 100%;
     max-width: 900px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;          /* Centra todo el conjunto */
     align-items: center;
-    margin: 25px auto 35px auto;
+    margin: 20px auto 30px auto;
     padding: 10px 15px;
-    gap: 20px;
+    gap: 10px;                         /* 🔹 MENOS distancia texto-logo */
 }
 
+/* Contenedor de textos */
 .intro-texto {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 2px;                          /* Textos más compactos */
+    text-align: right;                 /* Mejor alineación hacia el logo */
 }
 
+/* Textos */
 .intro-texto h1,
 .intro-texto h2 {
     margin: 0;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     font-weight: 400;
-    letter-spacing: 1px;
-    text-align: left;
+    letter-spacing: 0.5px;
     color: #333;
 }
 
@@ -66,19 +68,25 @@ body {
 
 /* Logo */
 .logo-intro {
-    width: 160px;
+    width: 150px;
     max-width: 100%;
     height: auto;
     display: block;
 }
 
 /* =============================
-   RESPONSIVE
+   RESPONSIVE (MÓVIL)
    ============================= */
 @media (max-width: 700px) {
     .intro-presentacion {
         flex-direction: column;
+        gap: 8px;
         text-align: center;
+    }
+
+    .intro-texto {
+        text-align: center;
+        gap: 4px;
     }
 
     .intro-texto h1 {
@@ -90,17 +98,9 @@ body {
     }
 
     .logo-intro {
-        width: 150px;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 450px) {
-    .logo-intro {
         width: 130px;
     }
 }
-
 
 /* ============================================================
    IMÁGENES DE LA CARTA
